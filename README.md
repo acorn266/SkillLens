@@ -7,7 +7,7 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikit-learn)](https://scikit-learn.org/)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/)
 
-**Live Demo:** https://skill-gap-predictor.vercel.app/
+🌐 **[Open SkillLens](https://skilllens-lemon.vercel.app/)**
 
 ## Overview
 
