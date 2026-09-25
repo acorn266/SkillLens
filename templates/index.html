@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Skill Gap Predictor</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="hero">
+
+            <div class="badge">
+                CAREER INTELLIGENCE
+            </div>
+
+            <h1>
+                Know Where You Stand.
+                <span>Know What Comes Next.</span>
+            </h1>
+
+            <p class="hero-text">
+                Select your target career and discover how your
+                current skills compare with the skills required
+                to pursue it.
+            </p>
+
+        </section>
+
+
+        <section class="career-card">
+
+            <div class="card-header">
+
+                <p class="eyebrow">
+                    STEP 01
+                </p>
+
+                <h2>
+                    Choose Your Target Career
+                </h2>
+
+                <p>
+                    Your selected career determines the skills
+                    and proficiency levels used in your assessment.
+                </p>
+
+            </div>
+
+
+            <form
+                action="{{ url_for('assessment') }}"
+                method="GET"
+            >
+
+                <label for="career">
+                    Target Career
+                </label>
+
+                <select
+                    id="career"
+                    name="career"
+                    required
+                >
+
+                    <option value="">
+                        Select a career...
+                    </option>
+
+                    {% for career in careers %}
+
+                    <option value="{{ career }}">
+                        {{ career }}
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Start My Assessment
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="feature-grid">
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <h3>
+                    Career-Specific Skills
+                </h3>
+
+                <p>
+                    Requirements automatically adapt to the career
+                    you choose.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <h3>
+                    Honest Reality Check
+                </h3>
+
+                <p>
+                    See where your current skill level actually stands.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <h3>
+                    Personalized Roadmap
+                </h3>
+
+                <p>
+                    Know exactly which skills to improve next.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Skill Gap Predictor
+                <span>•</span>
+                Career Readiness Intelligence
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

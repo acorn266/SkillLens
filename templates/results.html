@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ career }} — Career Reality Check
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<main class="page">
+
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <section class="results-header">
+
+        <a
+            href="{{ url_for('index') }}"
+            class="back-link"
+        >
+            ← Start Over
+        </a>
+
+
+        <p class="eyebrow">
+            CAREER REALITY CHECK
+        </p>
+
+
+        <h1>
+            {{ career }}
+        </h1>
+
+
+        <p>
+            Here's how your current self-assessed skills
+            align with the defined requirements for this career.
+        </p>
+
+    </section>
+
+
+
+
+
+    <!-- ==================================================
+         OVERALL READINESS
+    =================================================== -->
+
+    <section class="readiness-card dashboard-hero-card">
+
+        <div class="readiness-score">
+
+            <div class="readiness-ring" style="--readiness: {{ readiness }}%;">
+                <div class="readiness-ring-inner">
+                    <strong>{{ readiness }}%</strong>
+                </div>
+            </div>
+
+            <span>
+                SKILL READINESS
+            </span>
+
+        </div>
+
+
+        <div class="readiness-content">
+
+            <div class="readiness-label">
+                {{ readiness_label }}
+            </div>
+
+
+            <p>
+                {{ reality_message }}
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         DISCLAIMER
+    =================================================== -->
+
+    <div class="disclaimer">
+
+        <strong>
+            Reality Check:
+        </strong>
+
+        This score measures how closely your
+        self-assessed skills align with the defined
+        skill profile for this career.
+
+        It is an assessment of skill readiness,
+        <strong>
+            not a guarantee of employment.
+        </strong>
+
+    </div>
+
+
+    {% if severe_critical_gaps %}
+
+    <div class="critical-alert">
+
+        <div class="critical-alert-icon">!</div>
+
+        <div>
+            <strong>Critical skills need attention</strong>
+            <p>
+                Your overall score can hide weaknesses in essential skills.
+                {% for skill in severe_critical_gaps[:3] %}
+                    <span>{{ skill.skill }}{% if not loop.last %}, {% endif %}</span>
+                {% endfor %}
+                {% if severe_critical_gaps|length > 3 %}
+                    and {{ severe_critical_gaps|length - 3 }} more
+                {% endif %}
+                should be prioritized before you consider yourself career-ready.
+            </p>
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+
+    <!-- ==================================================
+         QUICK SUMMARY
+    =================================================== -->
+
+    <section class="summary-grid" id="overview">
+
+
+        <div class="summary-card">
+
+            <span class="summary-icon">
+                ✓
+            </span>
+
+            <div>
+
+                <strong>
+                    {{ strengths|length }}
+                </strong>
+
+                <p>
+                    Skill{% if strengths|length != 1 %}s{% endif %}
+                    meeting requirements
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <span class="summary-icon">
+                !
+            </span>
+
+            <div>
+
+                <strong>
+                    {{ gaps|length }}
+                </strong>
+
+                <p>
+                    Skill{% if gaps|length != 1 %}s{% endif %}
+                    requiring improvement
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-card">
+
+            <span class="summary-icon">
+                #
+            </span>
+
+            <div>
+
+                <strong>
+                    {{ skill_results|length }}
+                </strong>
+
+                <p>
+                    Skills assessed
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-card {% if critical_alignment < 75 %}summary-warning{% endif %}">
+
+            <span class="summary-icon">
+                ★
+            </span>
+
+            <div>
+
+                <strong>
+                    {{ critical_alignment }}%
+                </strong>
+
+                <p>
+                    Critical skill alignment
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         SKILL PROFILE
+    =================================================== -->
+
+    <section class="result-section" id="skills">
+
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                YOUR SKILL PROFILE
+            </p>
+
+
+            <h2>
+                Where You Stand
+            </h2>
+
+
+            <p>
+                A comparison between your current level
+                and the level expected for {{ career }}.
+            </p>
+
+        </div>
+
+
+
+        <div class="profile-list">
+
+
+            {% for skill in skill_results %}
+
+            <div class="profile-skill">
+
+
+                <div class="profile-top">
+
+
+                    <div class="profile-name">
+
+                        <h3>
+                            {{ skill.skill }}
+                        </h3>
+
+
+                        <span
+                            class="importance {{ skill.importance|lower }}"
+                        >
+                            {{ skill.importance }}
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-level">
+
+                        <strong>
+                            {{ skill.current_level }}/10
+                        </strong>
+
+                        <span>
+                            Required {{ skill.required_level }}/10
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="profile-bar">
+
+                    <div
+                        class="profile-current"
+                        style="width: {{ skill.current_level / 10 * 100 }}%;"
+                    ></div>
+
+
+                    <div
+                        class="profile-required-marker"
+                        style="left: {{ skill.required_level / 10 * 100 }}%;"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="profile-footer">
+
+
+                    {% if skill.gap == 0 %}
+
+                    <span class="status-strong">
+                        ✓ Requirement met
+                    </span>
+
+                    {% else %}
+
+                    <span class="status-gap">
+                        Gap: {{ skill.gap }}
+                        level{% if skill.gap != 1 %}s{% endif %}
+                    </span>
+
+                    {% endif %}
+
+
+                    <span>
+                        {{ skill.score }}% alignment
+                    </span>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         STRENGTHS
+    =================================================== -->
+
+    <section class="result-section" id="strengths">
+
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                YOUR ADVANTAGE
+            </p>
+
+
+            <h2>
+                Current Strengths
+            </h2>
+
+        </div>
+
+
+
+        {% if strengths %}
+
+        <div class="result-grid">
+
+
+            {% for skill in strengths %}
+
+            <div class="result-skill strength">
+
+
+                <div>
+
+                    <h3>
+                        {{ skill.skill }}
+                    </h3>
+
+
+                    <span>
+                        Required {{ skill.required_level }}/10
+                    </span>
+
+                </div>
+
+
+                <strong>
+                    {{ skill.current_level }}/10
+                </strong>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        {% else %}
+
+        <div class="empty-state">
+
+            You currently don't meet the defined level
+            for any of the assessed skills.
+
+            Your roadmap below shows where to begin.
+
+        </div>
+
+        {% endif %}
+
+    </section>
+
+
+
+    <!-- ==================================================
+         SKILL GAPS
+    =================================================== -->
+
+    <section class="result-section" id="gaps">
+
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                WHAT NEEDS WORK
+            </p>
+
+
+            <h2>
+                Skill Gaps
+            </h2>
+
+
+            <p>
+                Your highest-priority gaps are shown first.
+                Critical skills receive greater priority.
+            </p>
+
+        </div>
+
+
+
+        {% if gaps %}
+
+
+        <div class="gap-list">
+
+
+            {% for skill in gaps %}
+
+            <div class="gap-card">
+
+
+                <div class="gap-main">
+
+
+                    <div>
+
+                        <h3>
+                            {{ skill.skill }}
+                        </h3>
+
+
+                        <span
+                            class="importance {{ skill.importance|lower }}"
+                        >
+                            {{ skill.importance }}
+                        </span>
+
+                    </div>
+
+
+                    <div class="gap-level">
+
+                        <span>
+                            Your level:
+                            {{ skill.current_level }}/10
+                        </span>
+
+
+                        <strong>
+                            Required:
+                            {{ skill.required_level }}/10
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gap-bar">
+
+                    <div
+                        class="gap-progress"
+                        style="width: {{ skill.score }}%;"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="gap-footer">
+
+
+                    <p class="gap-status">
+
+                        <strong>
+                            {{ skill.status }}
+                        </strong>
+
+
+                        <span>
+                            • Gap:
+                            {{ skill.gap }}
+                            level{% if skill.gap != 1 %}s{% endif %}
+                        </span>
+
+                    </p>
+
+
+                    <span>
+                        {{ skill.score }}% alignment
+                    </span>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        {% else %}
+
+
+        <div class="success-state">
+
+            <span class="success-icon">
+                ✓
+            </span>
+
+
+            <div>
+
+                <strong>
+                    Excellent alignment!
+                </strong>
+
+
+                <p>
+                    You currently meet or exceed all defined
+                    skill requirements for this career profile.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        {% endif %}
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PERSONALIZED ROADMAP
+    =================================================== -->
+
+    <section class="result-section roadmap-section" id="roadmap">
+
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                YOUR NEXT MOVE
+            </p>
+
+
+            <h2>
+                Your Personalized Career Roadmap
+            </h2>
+
+
+            <p>
+                This roadmap is generated from your current
+                skill profile and the requirements defined
+                for {{ career }}.
+            </p>
+
+        </div>
+
+
+
+        <div class="roadmap">
+
+
+            {% for phase in roadmap %}
+
+            <div class="roadmap-phase">
+
+
+                <!-- ======================================
+                     PHASE NUMBER
+                ======================================= -->
+
+                <div class="phase-number">
+                    {{ loop.index }}
+                </div>
+
+
+                <div class="phase-content">
+
+
+                    <span class="phase-label">
+                        {{ phase.phase }}
+                    </span>
+
+
+                    <h3>
+                        {{ phase.title }}
+                    </h3>
+
+
+                    <p>
+                        {{ phase.description }}
+                    </p>
+
+
+
+                    <!-- ==================================
+                         PRIORITY SKILLS
+                    =================================== -->
+
+                    {% if phase.skills %}
+
+                    <div class="roadmap-skills-heading">
+                        Priority Skills
+                    </div>
+
+
+                    <div class="phase-skills">
+
+
+                        {% for skill in phase.skills %}
+
+                        <span>
+
+                            {{ skill.skill }}
+
+                            <small>
+                                Gap {{ skill.gap }}
+                            </small>
+
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+
+
+                    <!-- ==================================
+                         LEARNING ACTIONS
+                    =================================== -->
+
+                    {% if phase.actions %}
+
+                    <div class="roadmap-actions">
+
+
+                        {% for action in phase.actions %}
+
+
+                        {% if action.skill %}
+
+                        <!-- ==================================
+                             INTELLIGENT SKILL ACTION
+                        =================================== -->
+
+                        <div class="roadmap-action">
+
+
+                            <div class="roadmap-action-header">
+
+                                <div>
+
+                                    <h4>
+                                        {{ action.skill }}
+                                    </h4>
+
+                                    {% if action.stage %}
+
+                                    <span class="learning-stage">
+
+                                        {% if action.stage == "beginner" %}
+                                            Beginner Focus
+                                        {% elif action.stage == "intermediate" %}
+                                            Intermediate Focus
+                                        {% else %}
+                                            Advanced Focus
+                                        {% endif %}
+
+                                    </span>
+
+                                    {% endif %}
+
+                                </div>
+
+
+                                <div class="roadmap-level-badge">
+
+                                    {{ action.current_level }}/10
+
+                                    <span>
+                                        → {{ action.required_level }}/10
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            {% if action.description %}
+
+                            <p class="roadmap-action-description">
+                                {{ action.description }}
+                            </p>
+
+                            {% endif %}
+
+
+                            <p>
+                                Focus on:
+                            </p>
+
+
+                            <ul>
+
+                                {% for topic in action.topics %}
+
+                                <li>
+                                    {{ topic }}
+                                </li>
+
+                                {% endfor %}
+
+                            </ul>
+
+
+                            <div class="practice-note">
+
+                                <strong>
+                                    Practice:
+                                </strong>
+
+                                {{ action.practice }}
+
+                            </div>
+
+                        </div>
+
+
+                        {% else %}
+
+                        <!-- ==================================
+                             SIMPLE ROADMAP ACTION
+                        =================================== -->
+
+                        <div class="roadmap-action-simple">
+
+                            ✓ {{ action }}
+
+                        </div>
+
+                        {% endif %}
+
+
+                        {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+
+
+                    <!-- ==================================
+                         INTELLIGENT PROJECTS
+                    =================================== -->
+
+                    {% if phase.projects %}
+
+                    <div class="roadmap-projects">
+
+                        <div class="project-section-header">
+                            <div>
+                                <div class="roadmap-skills-heading">
+                                    Recommended Projects
+                                </div>
+                                <p class="project-section-intro">
+                                    Ranked by how strongly each project addresses the skill gaps identified in your assessment.
+                                </p>
+                            </div>
+                            <span class="project-count-badge">
+                                {{ phase.projects|length }} projects
+                            </span>
+                        </div>
+
+                        <div class="project-grid">
+
+                            {% for project in phase.projects %}
+
+                            <article class="project-card">
+
+                                <div class="project-card-top">
+                                    <span class="project-number">
+                                        PROJECT {{ loop.index }}
+                                    </span>
+
+                                    {% if loop.first and project.matched_gap_details %}
+                                    <span class="project-recommended-badge">
+                                        Best Match
+                                    </span>
+                                    {% endif %}
+                                </div>
+
+                                <h4>
+                                    {{ project.title }}
+                                </h4>
+
+                                {% if project.description %}
+                                <p class="project-description">
+                                    {{ project.description }}
+                                </p>
+                                {% endif %}
+
+                                <div class="project-meta">
+                                    <div>
+                                        <strong>Recommended Level</strong>
+                                        <span>{{ project.level }}</span>
+                                    </div>
+
+                                    {% if project.relevance_score is defined %}
+                                    <div class="project-score">
+                                        <strong>Skill Gap Fit</strong>
+                                        <span>{{ project.relevance_percent }}%</span>
+                                    </div>
+                                    {% endif %}
+                                </div>
+
+                                {% if project.why_recommended %}
+                                <div class="project-why">
+                                    <strong>Why this project?</strong>
+                                    <p>{{ project.why_recommended }}</p>
+                                </div>
+                                {% endif %}
+
+                                {% if project.gap_coverage %}
+                                <div class="project-coverage">
+                                    {{ project.gap_coverage }}
+                                </div>
+                                {% endif %}
+
+                                {% if project.matched_gap_details %}
+                                <div class="project-gap-focus">
+                                    <strong>Targets Your Skill Gaps</strong>
+
+                                    <div class="project-gap-list">
+                                        {% for gap in project.matched_gap_details %}
+                                        <div class="project-gap-row">
+                                            <div class="project-gap-name">
+                                                <span>{{ gap.skill }}</span>
+                                                {% if gap.importance == 'Critical' %}
+                                                <small>Critical</small>
+                                                {% endif %}
+                                            </div>
+                                            <div class="project-gap-levels">
+                                                {{ gap.current_level }}/{{ gap.required_level }}
+                                                <b>Gap {{ gap.gap }}</b>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% endif %}
+
+                                {% if project.skills %}
+                                <div class="project-focus">
+                                    <strong>Skills Practiced</strong>
+
+                                    <div class="project-skill-list">
+                                        {% for skill in project.skills %}
+                                        <span class="project-skill">{{ skill }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% endif %}
+
+                            </article>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FINAL MESSAGE
+    =================================================== -->
+
+    <section class="final-action">
+
+
+        <p class="eyebrow final-eyebrow">
+            YOUR NEXT CHAPTER
+        </p>
+
+
+        <h2>
+            Ready to close the gap?
+        </h2>
+
+
+        <p>
+            Your result isn't a final verdict.
+            It's a starting point for your next stage of growth.
+        </p>
+
+
+        <a
+            href="{{ url_for('index') }}"
+            class="primary-button"
+        >
+
+            Assess Another Career
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer>
+
+        <p>
+
+            Skill Gap Predictor
+
+            <span>
+                •
+            </span>
+
+            Career Readiness Intelligence
+
+        </p>
+
+    </footer>
+
+
+</main>
+
+
+</body>
+
+</html>

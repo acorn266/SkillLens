@@ -1,0 +1,169 @@
+Career,Career_Category,Career_Description,Skill,Skill_Category,Required_Level,Importance
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Python,Programming,9,Critical
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",SQL,Data,8,Critical
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Statistics,Mathematics & Data,9,Critical
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Machine Learning,Artificial Intelligence,9,Critical
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Data Visualization,Data Analysis,7,Important
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Pandas,Data Analysis,8,Important
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Data Cleaning,Data Analysis,8,Important
+Data Scientist,Data & AI,"Uses statistics, programming, and machine learning to turn data into predictions and decisions.",Communication,Professional Skill,7,Important
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",SQL,Data,9,Critical
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Excel,Data Analysis,8,Critical
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Python,Programming,7,Important
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Statistics,Mathematics & Data,8,Critical
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Data Visualization,Data Analysis,8,Critical
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Power BI,Business Intelligence,8,Critical
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Data Cleaning,Data Analysis,8,Important
+Data Analyst,Data & Analytics,"Analyzes business and operational data to uncover trends, insights, and actionable recommendations.",Communication,Professional Skill,7,Important
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",Python,Programming,9,Critical
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",Machine Learning,Artificial Intelligence,9,Critical
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",Statistics,Mathematics & Data,8,Critical
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",Data Structures,Computer Science,8,Important
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",SQL,Data,7,Important
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",TensorFlow/PyTorch,AI Frameworks,8,Critical
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",Git,Developer Tools,7,Important
+Machine Learning Engineer,Data & AI,"Builds, evaluates, and deploys machine learning systems that operate reliably in real applications.",Model Deployment,Professional Skill,8,Critical
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",Python,Programming,9,Critical
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",Machine Learning,Artificial Intelligence,9,Critical
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",Deep Learning,Artificial Intelligence,9,Critical
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",Statistics,Mathematics & Data,8,Important
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",TensorFlow/PyTorch,AI Frameworks,8,Critical
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",APIs,Backend Development,7,Important
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",Git,Developer Tools,7,Important
+AI Engineer,Data & AI,"Builds AI-powered applications by combining machine learning, deep learning, APIs, and deployment practices.",Model Deployment,Professional Skill,8,Critical
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",Programming,Software Development,9,Critical
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",Data Structures,Computer Science,8,Critical
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",Algorithms,Computer Science,8,Critical
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",Git,Developer Tools,8,Important
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",SQL,Data,7,Important
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",APIs,Backend Development,8,Important
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",Testing,Software Quality,8,Important
+Software Engineer,Software Development,"Designs, builds, tests, and maintains reliable software systems.",Problem Solving,Professional Skill,9,Critical
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",HTML,Frontend Development,9,Critical
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",CSS,Frontend Development,9,Critical
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",JavaScript,Frontend Development,9,Critical
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",React,Frontend Development,8,Critical
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",Responsive Design,Professional Skill,8,Important
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",Git,Developer Tools,7,Important
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",APIs,Backend Development,7,Important
+Frontend Developer,Software Development,"Builds accessible, responsive, and interactive user interfaces for the web.",UI/UX Fundamentals,Professional Skill,7,Important
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",Programming,Software Development,9,Critical
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",APIs,Backend Development,9,Critical
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",SQL,Data,8,Critical
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",Database Design,Professional Skill,8,Critical
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",Git,Developer Tools,8,Important
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",Authentication,Professional Skill,7,Important
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",Testing,Software Quality,8,Important
+Backend Developer,Software Development,"Builds server-side systems, APIs, databases, and application services.",Cloud Deployment,Professional Skill,7,Important
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",HTML/CSS,Professional Skill,8,Important
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",JavaScript,Frontend Development,9,Critical
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",React,Frontend Development,8,Critical
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",Backend Development,Professional Skill,8,Critical
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",SQL,Data,8,Critical
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",APIs,Backend Development,9,Critical
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",Git,Developer Tools,8,Important
+Full Stack Developer,Software Development,"Develops complete web applications across frontend, backend, data, and deployment layers.",Deployment,Professional Skill,7,Important
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,Programming,Software Development,9,Critical
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,Mobile Development,Professional Skill,9,Critical
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,UI Development,Professional Skill,8,Important
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,APIs,Backend Development,8,Critical
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,Git,Developer Tools,8,Important
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,Databases,Professional Skill,7,Important
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,Testing,Software Quality,8,Important
+Mobile App Developer,Software Development,Builds and ships mobile applications with strong user experience and reliable backend integration.,App Deployment,Professional Skill,7,Important
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",Python,Programming,8,Critical
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",SQL,Data,9,Critical
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",Data Warehousing,Professional Skill,9,Critical
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",ETL/ELT,Professional Skill,9,Critical
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",Apache Spark,Professional Skill,8,Important
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",Cloud Platforms,Professional Skill,8,Important
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",Databases,Professional Skill,9,Critical
+Data Engineer,Data & Analytics,"Designs data pipelines, storage systems, and processing workflows that make data usable at scale.",Git,Developer Tools,7,Important
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Cloud Computing,Cloud,9,Critical
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Linux,Systems,8,Critical
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Networking,Networking,8,Critical
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",AWS/Azure/GCP,Professional Skill,9,Critical
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Docker,DevOps,8,Important
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Kubernetes,Cloud & DevOps,7,Important
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Terraform,Infrastructure as Code,7,Important
+Cloud Engineer,Cloud & Infrastructure,"Designs, deploys, and operates scalable cloud infrastructure and services.",Git,Developer Tools,7,Important
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Linux,Systems,9,Critical
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Cloud Computing,Cloud,9,Critical
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Docker,DevOps,9,Critical
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Kubernetes,Cloud & DevOps,8,Critical
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",CI/CD,DevOps,9,Critical
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Git,Developer Tools,9,Critical
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Terraform,Infrastructure as Code,8,Important
+DevOps Engineer,Cloud & Infrastructure,"Automates software delivery and infrastructure operations using cloud, containers, CI/CD, and monitoring.",Monitoring,DevOps,7,Important
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Networking,Networking,9,Critical
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Cybersecurity Fundamentals,Cybersecurity,9,Critical
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Linux,Systems,8,Critical
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Security Monitoring,Cybersecurity,8,Critical
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Threat Analysis,Professional Skill,8,Critical
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Python,Programming,7,Important
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Incident Response,Cybersecurity,8,Critical
+Cybersecurity Analyst,Cybersecurity,"Monitors systems and investigates threats, incidents, and security risks.",Risk Assessment,Professional Skill,8,Important
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Cybersecurity,Professional Skill,9,Critical
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Networking,Networking,9,Critical
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Linux,Systems,9,Critical
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Cloud Security,Professional Skill,8,Critical
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Firewalls,Network Security,8,Critical
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Identity & Access Management,Professional Skill,8,Important
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Python,Programming,7,Important
+Security Engineer,Cybersecurity,"Designs and implements technical controls that protect systems, networks, and cloud environments.",Security Architecture,Professional Skill,9,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",UI Design,Design,9,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",UX Design,User Experience,9,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",Figma,Design Tool,9,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",User Research,UX / Product,8,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",Wireframing,Professional Skill,8,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",Prototyping,Professional Skill,9,Critical
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",Design Systems,Professional Skill,8,Important
+UI/UX Designer,Design,"Researches user needs and designs usable interfaces, flows, prototypes, and visual systems.",Communication,Professional Skill,7,Important
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Product Strategy,Product Management,9,Critical
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Market Research,Professional Skill,8,Critical
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",User Research,UX / Product,8,Important
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Product Analytics,Professional Skill,8,Important
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Communication,Professional Skill,9,Critical
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Project Management,Management,8,Critical
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Prioritization,Professional Skill,9,Critical
+Product Manager,Product & Management,"Guides product strategy, prioritization, discovery, and cross-functional execution.",Leadership,Professional Skill,8,Important
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Business Analysis,Business,9,Critical
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",SQL,Data,7,Important
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Excel,Data Analysis,8,Critical
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Data Analysis,Professional Skill,8,Critical
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Requirements Gathering,Business Analysis,9,Critical
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Process Modeling,Professional Skill,8,Important
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Communication,Professional Skill,9,Critical
+Business Analyst,Business & Analytics,"Translates business problems into requirements, analysis, and practical solutions.",Problem Solving,Professional Skill,8,Critical
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Digital Marketing,Marketing,9,Critical
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",SEO,Digital Marketing,8,Critical
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Content Marketing,Marketing,8,Critical
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Social Media Marketing,Professional Skill,9,Critical
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Google Analytics,Professional Skill,8,Important
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Email Marketing,Professional Skill,7,Important
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Copywriting,Marketing,8,Important
+Digital Marketing Specialist,Marketing,"Plans and measures digital campaigns across search, content, social, email, and analytics.",Marketing Analytics,Professional Skill,8,Important
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",SQL,Data,10,Critical
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Database Management,Database,9,Critical
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Database Security,Database Security,8,Critical
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Backup & Recovery,Database Administration,9,Critical
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Linux,Systems,7,Important
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Performance Tuning,Professional Skill,8,Critical
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Cloud Databases,Professional Skill,7,Important
+Database Administrator,Data & Infrastructure,"Maintains secure, reliable, performant database systems and recovery processes.",Troubleshooting,Technical Skill,9,Critical
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",Software Testing,Professional Skill,9,Critical
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",Test Automation,Professional Skill,9,Critical
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",Python/Java,Professional Skill,7,Important
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",API Testing,Professional Skill,8,Critical
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",SQL,Data,7,Important
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",Selenium,Professional Skill,8,Important
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",Git,Developer Tools,7,Important
+QA Engineer,Software Quality,"Validates software quality through test design, automation, API testing, and systematic problem solving.",Problem Solving,Professional Skill,8,Critical
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Networking,Networking,10,Critical
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",TCP/IP,Professional Skill,9,Critical
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Routing & Switching,Professional Skill,9,Critical
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Network Security,Professional Skill,8,Critical
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Linux,Systems,7,Important
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Firewalls,Network Security,8,Important
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Network Troubleshooting,Professional Skill,9,Critical
+Network Engineer,Networking & Infrastructure,"Designs, configures, secures, and troubleshoots computer networks.",Cloud Networking,Professional Skill,7,Important

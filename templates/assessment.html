@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>{{ career }} — Skill Assessment</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="assessment-header">
+
+            <a
+                href="{{ url_for('index') }}"
+                class="back-link"
+            >
+                ← Change Career
+            </a>
+
+            <p class="eyebrow">
+                STEP 02 • SKILL ASSESSMENT
+            </p>
+
+            <h1>
+                {{ career }}
+            </h1>
+
+            {% if career_metadata %}
+            <div class="career-context">
+                <div class="career-context-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" role="presentation">
+                        <path d="M14 34h22a7 7 0 0 0 1-13.92A12 12 0 0 0 14.44 17 8.5 8.5 0 0 0 14 34Z"></path>
+                        <rect x="18" y="26" width="18" height="11" rx="2"></rect>
+                        <path d="M21 29h12M21 33h12"></path>
+                    </svg>
+                </div>
+                <div class="career-context-content">
+                    <span class="career-context-category">
+                        {{ career_metadata.category }}
+                    </span>
+                    <p>
+                        {{ career_metadata.description }}
+                    </p>
+                </div>
+            </div>
+            {% endif %}
+
+            <p>
+                Rate your current ability in each skill honestly.
+                The required levels are automatically defined by the
+                selected career.
+            </p>
+
+        </section>
+
+
+        <form
+            action="{{ url_for('results') }}"
+            method="POST"
+            class="assessment-form"
+        >
+
+            <input
+                type="hidden"
+                name="career"
+                value="{{ career }}"
+            >
+
+
+            <div class="scale-info">
+
+                <div>
+                    <strong>How to rate yourself</strong>
+
+                    <p>
+                        1 = Beginner
+                        &nbsp;•&nbsp;
+                        5 = Intermediate
+                        &nbsp;•&nbsp;
+                        10 = Advanced
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="skills-list">
+
+                {% for skill in skills %}
+
+                {% set field_name = skill_field_name(skill.Skill) %}
+
+                <div class="skill-card">
+
+                    <div class="skill-info">
+
+                        <div>
+
+                            <h3>
+                                {{ skill.Skill }}
+                            </h3>
+
+                            <span
+                                class="importance {{ skill.Importance|lower }}"
+                            >
+                                {{ skill.Importance }}
+                            </span>
+
+                        </div>
+
+                        <div class="required-level">
+
+                            <span>
+                                Required
+                            </span>
+
+                            <strong>
+                                {{ skill.Required_Level }}/10
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="slider-area">
+
+                        <input
+                            type="range"
+                            id="{{ field_name }}"
+                            name="skill_{{ field_name }}"
+                            min="1"
+                            max="10"
+                            value="1"
+                            class="skill-slider"
+                            data-output="{{ field_name }}_value"
+                        >
+
+                        <div class="slider-labels">
+
+                            <span>
+                                Beginner
+                            </span>
+
+                            <output
+                                id="{{ field_name }}_value"
+                            >
+                                1
+                            </output>
+
+                            <span>
+                                Advanced
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button large-button"
+            >
+                Analyze My Career Readiness
+                <span>→</span>
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

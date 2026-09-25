@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated ML artifacts
+models/
+*.pkl
+*.joblib
+*.joblib.gz
+
+# Generated/derived datasets
+# Keep the authoritative career database because the web app needs it.
+data/processed/*
+!data/processed/career_intelligence.csv
+
+# Local logs / temporary files
+*.log
+*.tmp
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.*

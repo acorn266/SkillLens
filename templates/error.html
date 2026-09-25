@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ code }} — Skill Gap Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="page">
+        <section class="assessment-header">
+            <p class="eyebrow">ERROR {{ code }}</p>
+            <h1>We couldn't complete that request.</h1>
+            <p>{{ message }}</p>
+            <a href="{{ url_for('index') }}" class="primary-button">Return to career selection →</a>
+        </section>
+    </main>
+</body>
+</html>
