@@ -266,9 +266,15 @@ This project demonstrates:
 - Automated testing
 - Separation of an experimental ML model from the production application
 
-## Author
+---
 
-**Wajeeha Asad** — BS Computer Science student building practical AI/ML and software projects.
+## 👩‍💻 Author
 
-- GitHub: https://github.com/wajeeha-asad
-- Project: https://github.com/wajeeha-asad/skill-gap-predictor
+**Aastha** 
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aastha-karn-61876a298/)
+
+---
+
+<div align="center">
+Built with ❤️ 
